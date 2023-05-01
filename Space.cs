@@ -24,12 +24,42 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 using System;
+using QuickTools.QCore;
+using QuickTools.QConsole;
+using System.Threading;
 namespace CSpaceWar
       {
       public class Space
             {
+                        public int LimitX;
+                        public int LimitY;
+
+
+ 
+                  internal void Show(SpaceShip spaceShip , EnemySpaceShip enemy)
+                  {
+                        //Get.Yellow($"{spaceShip.Location[0]} : {spaceShip.Location[1]}");
+                        Console.SetCursorPosition(spaceShip.Location[0] , spaceShip.Location[1]);
+                        Console.Write(spaceShip.Ship);
+                       
+                        Console.SetCursorPosition(enemy.Location[0], enemy.Location[1]);
+                        Console.Write(spaceShip.Ship);
+                       
+                        Thread.Sleep(60);
+                        Console.Clear(); 
+                  //Get.Clear(true);
+                        
+
+                        // Console.SetCursorPosition(enemy.Location[0] , enemy.Location[1]);
+                      
+                      
+                  }
+
             public Space()
                   {
+
                   }
+
+         
             }
       }

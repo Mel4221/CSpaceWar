@@ -24,10 +24,31 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 using System;
+using QuickTools.QConsole;
+
 namespace CSpaceWar
       {
       public class SpaceShip
             {
+            public bool IsAlive = true;
+            public string Ship = @"^<=(O)=>^";
+            public int[] Location = { 0 , 0 };
+
+            public void Play()
+                  {
+                  ArrowKey arrow = new ArrowKey();
+                  arrow.Capture("Esc" , () => {
+                        this.Location = new int[2];
+                        this.Location[0] = arrow.X;
+                        this.Location[1] = arrow.Y;
+                  } , () => {
+                        this.Location = new int[2];
+                        this.Location[0] = arrow.X;
+                        this.Location[1] = arrow.Y;
+                  });
+                  }
+
+
             public SpaceShip()
                   {
                   }

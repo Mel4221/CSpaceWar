@@ -31,7 +31,8 @@ namespace CSpaceWar
             {
             public static void Main(string[] args)
                   {
-                
+                        GameMenu gameMenu = new GameMenu();
+                        gameMenu.Start();
                   }
             }
       }

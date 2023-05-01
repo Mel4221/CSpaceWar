@@ -24,21 +24,32 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 using System;
+using QuickTools.QConsole; 
 namespace CSpaceWar
       {
-      public class EnemySpaceShip:SpaceShip
+      public class GameMenu
             {
-            public EnemySpaceShip()
+                  public void Start()
                   {
-                        this.Ship = @"X_____V_____X";
-                        this.Location = new int[2];
-                        this.Location[0] = 12;
-                        this.Location[1] = 24; 
-                  }
+                        string[] optionsList = {"New Game","Continue Game","Records","Settings","Exit"};
+                        Options options = new Options(optionsList);
 
-            internal void Show()
-                  {
-                           
+                        switch(options.Pick())
+                        {
+                        case 0:
+                              GameRules gameRules = new GameRules();
+                              gameRules.Start();
+                              break;
+                        case 1:
+                              break;
+                        case 2:
+                              break;
+                        case 3:
+                              break;
+                        default:
+                              Environment.Exit(0);
+                              break;
+                        }
                   }
             }
       }

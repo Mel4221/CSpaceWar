@@ -41,6 +41,7 @@
     <Compile Include="EnemySpaceShip.cs" />
     <Compile Include="SpaceShip.cs" />
     <Compile Include="GameRules.cs" />
+    <Compile Include="GameMenu.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
 </Project>

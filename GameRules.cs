@@ -24,24 +24,61 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 using System;
+using System.Threading; 
+using QuickTools.QCore;
 namespace CSpaceWar
       {
       public class GameRules
             {
             public int Lives = 3;
-            public int Levels = 100; 
+            public int Levels = 100;
+            public Thread MainThread;
+            public Thread SpaceThread;
+            public Thread EnemysThread;
+            public Thread SpaceShipThread;
+
+
+
             public enum Dificulty
                   {
                         Easy,
                         Normal,
                         Hard
                   }
-        
 
 
 
-                
-              public GameRules()
+                  public void Start()
+                  {
+                        SpaceShip spaceShip = new SpaceShip();
+                        Space space = new Space();
+                        EnemySpaceShip enemySpaceShip = new EnemySpaceShip();
+
+
+                        this.SpaceShipThread = new Thread(()=> {
+                              spaceShip.Play(); 
+                        });
+                        this.EnemysThread = new Thread(() => {
+                              enemySpaceShip.Show();
+                        });
+                        this.SpaceThread = new Thread(() => {
+                              while(true)
+                                    {
+                                    space.Show(spaceShip , enemySpaceShip);
+                                   // Get.Green($"{spaceShip.Location[0]} : {enemySpaceShip.Location[1]}");
+                                    }
+                        });
+
+                        this.SpaceShipThread.Start();
+                        this.EnemysThread.Start();
+                        this.SpaceThread.Start();
+
+
+
+                  }
+
+
+            public GameRules()
                   {
                   }
             }
