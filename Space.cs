@@ -31,8 +31,10 @@ namespace CSpaceWar
       {
       public class Space
             {
-                        public int LimitX;
-                        public int LimitY;
+                        public int Max_X;
+                        public int Max_Y;
+                        public int Min_X;
+                        public int Min_Y; 
 
 
  
@@ -43,7 +45,7 @@ namespace CSpaceWar
                         Console.Write(spaceShip.Ship);
                        
                         Console.SetCursorPosition(enemy.Location[0], enemy.Location[1]);
-                        Console.Write(spaceShip.Ship);
+                        Console.Write(enemy.Ship);
                        
                         Thread.Sleep(60);
                         Console.Clear(); 
@@ -57,7 +59,10 @@ namespace CSpaceWar
 
             public Space()
                   {
-
+                        this.Max_X = Console.BufferWidth;
+                        this.Max_Y = Console.BufferHeight;
+                        this.Min_X = 1;
+                        this.Min_Y = 1;
                   }
 
          

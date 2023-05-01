@@ -34,17 +34,23 @@ namespace CSpaceWar
             public string Ship = @"^<=(O)=>^";
             public int[] Location = { 0 , 0 };
 
-            public void Play()
+
+
+
+            public void Play(Space spaceShip)
                   {
                   ArrowKey arrow = new ArrowKey();
                   arrow.Capture("Esc" , () => {
+
                         this.Location = new int[2];
                         this.Location[0] = arrow.X;
                         this.Location[1] = arrow.Y;
+
                   } , () => {
                         this.Location = new int[2];
                         this.Location[0] = arrow.X;
                         this.Location[1] = arrow.Y;
+
                   });
                   }
 

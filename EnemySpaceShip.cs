@@ -28,12 +28,19 @@ namespace CSpaceWar
       {
       public class EnemySpaceShip:SpaceShip
             {
+
+
+            public void FlyDown()
+                  {
+                        
+                  }
+
             public EnemySpaceShip()
                   {
                         this.Ship = @"X_____V_____X";
                         this.Location = new int[2];
                         this.Location[0] = 12;
-                        this.Location[1] = 24; 
+                        this.Location[1] = 6; 
                   }
 
             internal void Show()

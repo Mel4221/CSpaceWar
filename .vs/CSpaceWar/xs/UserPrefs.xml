@@ -1,17 +1,16 @@
 ﻿<Properties StartupConfiguration="{940EBD50-BA92-47F5-A380-594FD3FD14C0}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="SpaceShip.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Space.cs">
     <Files>
-      <File FileName="Program.cs" Line="37" Column="14" />
-      <File FileName="GameRules.cs" Line="61" Column="39" />
-      <File FileName="SpaceShip.cs" Line="36" Column="14" />
-      <File FileName="Space.cs" Line="36" Column="13" />
+      <File FileName="GameRules.cs" Line="57" Column="19" />
+      <File FileName="SpaceShip.cs" Line="31" Column="29" />
+      <File FileName="Space.cs" Line="58" Column="20" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="CSpaceWar" expanded="True">
             <Node name="CSpaceWar" expanded="True">
-              <Node name="SpaceShip.cs" selected="True" />
+              <Node name="Space.cs" selected="True" />
             </Node>
           </Node>
         </State>

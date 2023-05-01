@@ -36,6 +36,7 @@ namespace CSpaceWar
             public Thread SpaceThread;
             public Thread EnemysThread;
             public Thread SpaceShipThread;
+            public Thread GameRulesThread;
 
 
 
@@ -56,7 +57,7 @@ namespace CSpaceWar
 
 
                         this.SpaceShipThread = new Thread(()=> {
-                              spaceShip.Play(); 
+                              spaceShip.Play();
                         });
                         this.EnemysThread = new Thread(() => {
                               enemySpaceShip.Show();
@@ -65,16 +66,76 @@ namespace CSpaceWar
                               while(true)
                                     {
                                     space.Show(spaceShip , enemySpaceShip);
-                                   // Get.Green($"{spaceShip.Location[0]} : {enemySpaceShip.Location[1]}");
+                                          //Get.Green($"{spaceShip.Location[0]} : {enemySpaceShip.Location[1]}");
                                     }
                         });
+                        this.GameRulesThread = new Thread(() => {
 
-                        this.SpaceShipThread.Start();
+                        });
+
+
+                  this.SpaceShipThread.Start();
                         this.EnemysThread.Start();
                         this.SpaceThread.Start();
 
 
 
+                  }
+
+
+                  public bool GameRuleChecker(Space space , SpaceShip spaceShip , EnemySpaceShip enemySpaceShip)
+                  {
+                  bool meet = false;
+                              
+
+
+
+                  return meet; 
+                  }
+
+
+
+
+                  public bool LimitChecker(Space space,SpaceShip spaceShip,EnemySpaceShip enemySpaceShip)
+                  {
+                       if(enemySpaceShip.Location[0] == space.Max_X || enemySpaceShip.Location[1] == space.Max_Y)
+                        {
+                              return true; 
+                        }
+                        if(enemySpaceShip.Location[0] == space.Min_X || enemySpaceShip.Location[1] == space.Min_Y)
+                        {
+                              return true;
+                        }
+                        if(spaceShip.Location[0] == space.Max_X || spaceShip.Location[1] == space.Max_Y)
+                              {
+                              return true;
+                              }
+                        if(spaceShip.Location[0] == space.Min_X || spaceShip.Location[1] == space.Min_Y)
+                        {
+                              return true;
+                        }
+                        else
+                        {
+                            return  false; 
+                        }
+                  }
+
+
+            /// <summary>
+            /// Check If on any of the X or Y they are matching the values which means that there was a crash
+            /// </summary>
+            /// <returns><c>true</c>, if check was collitioned, <c>false</c> otherwise.</returns>
+            /// <param name="spaceShip">Space ship.</param>
+            /// <param name="enemySpaceShip">Enemy space ship.</param>
+            public bool CollitionCheck(SpaceShip spaceShip , EnemySpaceShip enemySpaceShip)
+                  {
+                  bool IsACrash = false; 
+                        if(spaceShip.Location[0] == enemySpaceShip.Location[0] 
+                        || spaceShip.Location[1] == enemySpaceShip.Location[1])
+                        {
+                              IsACrash = true; 
+                        }
+                  return IsACrash; 
                   }
 
 
