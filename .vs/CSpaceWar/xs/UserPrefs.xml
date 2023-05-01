@@ -1,0 +1,26 @@
+﻿<Properties StartupConfiguration="{940EBD50-BA92-47F5-A380-594FD3FD14C0}|Default">
+  <MonoDevelop.Ide.Workbench ActiveDocument="GameRules.cs">
+    <Files>
+      <File FileName="Program.cs" Line="34" Column="12" />
+      <File FileName="GameRules.cs" Line="31" Column="20" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="CSpaceWar" expanded="True">
+            <Node name="CSpaceWar" expanded="True">
+              <Node name="GameRules.cs" selected="True" />
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|x86" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.ItemProperties.CSpaceWar FirstBuild="True" PreferredExecutionTarget="MonoDevelop.Default" />
+</Properties>

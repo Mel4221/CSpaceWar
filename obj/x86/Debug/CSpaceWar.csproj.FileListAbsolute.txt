@@ -1,0 +1,6 @@
+/home/mel/Documents/csharp/CSpaceWar/bin/Debug/CSpaceWar.exe
+/home/mel/Documents/csharp/CSpaceWar/bin/Debug/CSpaceWar.pdb
+/home/mel/Documents/csharp/CSpaceWar/obj/x86/Debug/CSpaceWar.csproj.AssemblyReference.cache
+/home/mel/Documents/csharp/CSpaceWar/obj/x86/Debug/CSpaceWar.csproj.CoreCompileInputs.cache
+/home/mel/Documents/csharp/CSpaceWar/obj/x86/Debug/CSpaceWar.exe
+/home/mel/Documents/csharp/CSpaceWar/obj/x86/Debug/CSpaceWar.pdb
